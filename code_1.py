@@ -16,7 +16,7 @@ img_size=256
 root=tk.Tk()
 root.title("disting cats and dogs")
 root.geometry('600x600')
-root.configure(bg="red")
+root.configure(bg="gray")
 
 imgFrame=tk.Frame(height=480,width=480) #create the container where the vedio will be displayed
 imgFrame.pack()
@@ -65,7 +65,7 @@ def predict():
         prediction_label.config(text=prediction_text)
 
 select_button = Button(root, text="Sélectionner une image", command=select_image)
-select_button.pack()
+select_button.pack(side=tk.TOP, anchor=tk.CENTER) #centrer le bouton en haut
 predict_button = Button(root, text="Predict", command=predict)
 predict_button.pack()
 
